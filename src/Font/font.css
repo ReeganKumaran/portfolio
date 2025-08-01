@@ -1,20 +1,29 @@
 @font-face {
   font-family: LibertinusSerif;
-  src: url('./LibertinusSerif-Regular.ttf') format('truetype');
+  src: url("./LibertinusSerif-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: Bungee;
-  src: url('./Bungee-Regular.ttf') format('truetype');
+  src: url("./Bungee-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
-.regular{
+@font-face {
+  font-family: Bungee200;
+  src: url("./Bungee-Regular.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+.regular {
   font-family: LibertinusSerif;
 }
-.bungee{
+.bungee {
   font-family: Bungee;
+}
+.bungee-200 {
+  font-family: Bungee200;
 }
 /* @font-face {
   font-family: 'Libertinus Serif';

@@ -20,7 +20,9 @@ import JavaScript from "./assets/Javascript.png";
 import Java from "./assets/Java.png";
 import TypeScript from "./assets/Typescript.png";
 import Arduino from "./assets/Arduino.png";
-
+import GitHubWhite from "./assets/GitHub.svg"
+import { Italic } from "lucide-react";
+import { img, title } from "motion/react-client";
 export const assets = {
   photo,
 };
@@ -36,7 +38,7 @@ export const techSkill = [
   { title: "React", img: ReactLogo },
   { title: "Tailwind CSS", img: TailwindCSS },
   { title: "Vite.js", img: ViteJs },
-  { title: "GitHub", img: GitHub },
+  { title: "GitHub", img: GitHubWhite },
   { title: "Git", img: Git },
   { title: "Firebase", img: Firebase },
   { title: "CSS3", img: CSS3 },
@@ -46,4 +48,5 @@ export const techSkill = [
   { title: "Java", img: Java },
   { title: "TypeScript", img: TypeScript },
   { title: "Arduino", img: Arduino },
+
 ];
