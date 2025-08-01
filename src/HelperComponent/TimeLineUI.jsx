@@ -1,6 +1,5 @@
 import { useScroll, useTransform, motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
-import Header from "../../Components/Header";
 
 export default function TimeLineUI({ data }) {
   const ref = useRef(null);
@@ -29,7 +28,9 @@ export default function TimeLineUI({ data }) {
     >
       <div className="text-center mb-10 flex flex-col items-center justify-center">
         <div className="w-20 h-1 bg-purple-600 mb-2 rounded-full"></div>
-        <Header text1="How development " text2="through Alcaline works" />
+        <h2 className="text-3xl md:text-5xl font-bold text-gray-900">
+          How development <span className="text-purple-600">through Alcaline works</span>
+        </h2>
       </div>
 
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">

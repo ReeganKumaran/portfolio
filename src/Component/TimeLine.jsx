@@ -50,7 +50,7 @@ export default function TimeLine() {
     ),
   }));  
   return (
-    <div className="block lg:hidden relative w-full overflow-clip">
+    <div className="relative w-full overflow-clip">
       <TimeLineUI data={data} />
     </div>
   );
