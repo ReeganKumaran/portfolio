@@ -1,18 +1,21 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 
 const ThemeContext = createContext(null);
 
 const themes = {
   dark: {
     text: "#e1e1e1",
-    bgColor: "#161616ff",
+    bgColorSecondary: "#111111ff",
+    bgColorPrimary: "#000000ff",
     bgTech: "#303030ff"
   },
 };
 
 function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(themes.dark);
-
+  useEffect(()=>{
+    console.log(theme)
+  },[theme])
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       {children}

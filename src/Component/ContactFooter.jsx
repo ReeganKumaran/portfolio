@@ -17,7 +17,7 @@ const ContactFooter = () => {
   console.log(theme);
   // console.log(`text-[${textColor}] `)
   return (
-    <div className="font-libertinus bg-black">
+    <div style={{backgroundColor:theme.bgColorSecondary}} className="font-libertinus bg-black">
       <div
         style={{
           backgroundImage: "linear-gradient(to left, #000000ff, #3b3b3bff)",
@@ -68,7 +68,7 @@ const ContactFooter = () => {
       <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
           <div>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Gravitorix</h3>
+            <h3 style={{color:theme.text}} className="text-xl font-bold text-gray-900 mb-4">Gravitorix</h3>
             <p className="text-gray-600 mb-6">
               Transforming businesses through innovative technology solutions
               and strategic partnerships.
@@ -87,7 +87,7 @@ const ContactFooter = () => {
           </div>
 
           <div>
-            <h4 className="font-semibold text-gray-900 mb-4">Company</h4>
+            <h4 style={{color:theme.text}}  className="font-semibold text-gray-900 mb-4">Company</h4>
             <ul className="space-y-2">
               {["About Us", "Our Team", "Careers", "News", "Contact"].map(
                 (link, i) => (
@@ -105,7 +105,7 @@ const ContactFooter = () => {
           </div>
 
           <div>
-            <h4 className="font-semibold text-gray-900 mb-4">Solutions</h4>
+            <h4 style={{color:theme.text}}  className="font-semibold text-gray-900 mb-4">Solutions</h4>
             <ul className="space-y-2">
               {[
                 "Enterprise",
@@ -127,7 +127,7 @@ const ContactFooter = () => {
           </div>
 
           <div>
-            <h4 className="font-semibold text-gray-900 mb-4">Contact Info</h4>
+            <h4 style={{color:theme.text}}  className="font-semibold text-gray-900 mb-4">Contact Info</h4>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />

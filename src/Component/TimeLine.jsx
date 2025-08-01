@@ -1,57 +1,59 @@
+import { assets, srkAssets, stormAssets } from "../assets";
+import { useTheme } from "../Context/Theme";
+import HeadLine from "../HelperComponent/HeadLine";
 import TimeLineUI from "../HelperComponent/TimeLineUI";
 
 export default function TimeLine() {
+  const { theme } = useTheme();
+  console.log(stormAssets);
   const steps = [
     {
       id: 1,
-      title: "Assemble the right team",
+      heading: "1#",
+      title: "Storm (Weather Application)",
+      assets:stormAssets,
       description:
         "We handle all aspects of vetting and choosing the right team that you dont have the time, expertise, or desire to do.",
     },
     {
       id: 2,
-      title: "Sprint planning",
+      heading: "2#",
+      assets:srkAssets,
+      title: "Invoice Genarator",
       description:
-        "Sprint roadmap is a collective planning effort. Team members collaborate to clarify items and ensure shared understanding.",
+        "Allow users to create, edit, and download invoices dynamically with auto-calculation of totals, taxes, and downloadable PDF.",
     },
-    {
-      id: 3,
-      title: "Tech architecture",
-      description:
-        "We break monolithic apps into microservices. Decoupling the code allows teams to move faster and more independently",
-    },
-    {
-      id: 4,
-      title: "Standups & weekly demos",
-      description:
-        "Standups, weekly demos, and weekly reviews make sure everyone is on the same page and can raise their concerns.",
-    },
-    {
-      id: 5,
-      title: "Code reviews",
-      description:
-        "Code reviews before release help detect issues like memory leaks, file leaks, performance signs, and general bad smells",
-    },
-    {
-      id: 6,
-      title: "Iterative delivery",
-      description:
-        "We divide the implementation process into several checkpoints rather than a single deadline.",
-    },
+
   ];
   const data = steps.map((step) => ({
     title: step.title,
+    heading: step.heading,
+    assets:step.assets|| [],
     content: (
       <div>
-        <p className="mb-4 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-600">
+        <p
+          style={{ color: theme.text }}
+          className="mb-4 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-600"
+        >
           {step.description}
         </p>
       </div>
     ),
-  }));  
+  }));
+  console.log(data)
   return (
-    <div className="relative w-full overflow-clip">
-      <TimeLineUI data={data} />
-    </div>
+    <>
+      <div
+        style={{
+          backgroundColor: theme.bgColorPrimary,
+        }}
+        className="relative w-full overflow-clip"
+      >
+        <div className="pt-15">
+          <HeadLine title={"Projects"} />
+        </div>
+        <TimeLineUI data={data} />
+      </div>
+    </>
   );
 }
